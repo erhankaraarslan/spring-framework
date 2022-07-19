@@ -4,10 +4,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 
 @Configuration
 //@ComponentScan("com.karaarslan.springdemo")
-@PropertySource("classpath:mylogger.properties")
+
+
+@PropertySources({
+	@PropertySource("classpath:mylogger.properties"),
+	@PropertySource("classpath:support.properties")
+})
 public class SupportConfig {
 	@Bean
 	public MyLoggerConfig myLoggerConfig(@Value("${root.logger.level}") String rootLoggerLevel,
