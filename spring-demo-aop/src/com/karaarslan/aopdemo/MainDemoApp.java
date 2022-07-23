@@ -20,7 +20,7 @@ public class MainDemoApp {
 		theAccountDAO.addAccount();
 
 		// call the theMemberShipDAO.addAccount
-		theMemberShipDAO.addAccount();
+		theMemberShipDAO.addSillyMember();
 
 		// close the context
 		context.close();
